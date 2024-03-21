@@ -48,12 +48,12 @@ public class TestPersonnage {
         assertEquals(80,victime.getPoints());
     }
     
-    Personnage mechant = new Personnage(); // Assuming 100 is the expected value
-    Personnage victime = new Personnage();
+  
     @Test 
     public void hertReducePointsToZeroForVictimInitTest() {
         // Create an instance of Personnage with initial hit points
-        
+    	  Personnage mechant = new Personnage(); // Assuming 100 is the expected value
+    	    Personnage victime = new Personnage();
         
         for(int index = 0; index < 5 ; index ++) {
         	mechant.hurt(victime);
@@ -62,6 +62,18 @@ public class TestPersonnage {
         assertEquals(0,victime.getPoints());
     }
     
+    
+    @Test 
+    public void vicimeIsNotAliveInitTest() {
+        // Create an instance of Personnage with initial hit points
+    	Personnage mechant = new Personnage(); // Assuming 100 is the expected value
+	    Personnage victime = new Personnage();
+    
+    for(int index = 0; index < 5 ; index ++) {
+    	mechant.hurt(victime);
+    }
+        assertEquals(false,victime.isAlive());
+    }
    
 
     

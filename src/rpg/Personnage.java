@@ -28,5 +28,9 @@ public class Personnage {
 	
 	public void hurt(Personnage victime) {
 		victime.points = victime.points - this.HEART_LOOSED_POINTS;
+		
+		if (victime.points == 0 ) {
+			victime.isAlive = false;
+		}
 	}
 }
