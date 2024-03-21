@@ -25,6 +25,17 @@ public class TestPersonnage {
         assertEquals(true,personnage.isAlive());
         // Check if the initial hi
     }
- 
+    
+    @Test 
+    public void attackReduceOnePointsForVictimInitTest() {
+        // Create an instance of Personnage with initial hit points
+        Personnage mechant = new Personnage(); // Assuming 100 is the expected value
+        Personnage victime = new Personnage();
+        
+        mechant.attack(victime);
+        
+        assertEquals(99,victime.getPoints());
+    }
+    
     
 }
