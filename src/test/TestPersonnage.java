@@ -37,5 +37,32 @@ public class TestPersonnage {
         assertEquals(99,victime.getPoints());
     }
     
+    @Test 
+    public void hertReduceTwentyPointsForVictimInitTest() {
+        // Create an instance of Personnage with initial hit points
+        Personnage mechant = new Personnage(); // Assuming 100 is the expected value
+        Personnage victime = new Personnage();
+        
+        mechant.hurt(victime);
+        
+        assertEquals(80,victime.getPoints());
+    }
+    
+    Personnage mechant = new Personnage(); // Assuming 100 is the expected value
+    Personnage victime = new Personnage();
+    @Test 
+    public void hertReducePointsToZeroForVictimInitTest() {
+        // Create an instance of Personnage with initial hit points
+        
+        
+        for(int index = 0; index < 5 ; index ++) {
+        	mechant.hurt(victime);
+        }
+       
+        assertEquals(0,victime.getPoints());
+    }
+    
+   
+
     
 }
