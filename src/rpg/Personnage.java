@@ -1,6 +1,8 @@
 package rpg;
 
 public class Personnage {
+	private static int HEART_LOOSED_POINTS = 20;
+	
 	private int points = 100;
 	private  Boolean isAlive = true;
 	
@@ -23,5 +25,8 @@ public class Personnage {
 	public void attack(Personnage victime) {
 		victime.points = victime.points - 1;
 	}
-
+	
+	public void hurt(Personnage victime) {
+		victime.points = victime.points - this.HEART_LOOSED_POINTS;
+	}
 }
