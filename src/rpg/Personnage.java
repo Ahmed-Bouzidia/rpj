@@ -19,5 +19,9 @@ public class Personnage {
 	public Boolean isAlive() {
 		return this.isAlive;
 	}
+	
+	public void attack(Personnage victime) {
+		victime.points = victime.points - 1;
+	}
 
 }
