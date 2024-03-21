@@ -12,9 +12,19 @@ public class TestPersonnage {
         // Create an instance of Personnage with initial hit points
         Personnage personnage = new Personnage(); // Assuming 100 is the expected value
         
-        assertEquals(1000,personnage.getPoints());
+        assertEquals(100,personnage.getPoints());
         // Check if the initial hi
     }
     
+ 
+    @Test 
+    public void isAliveAtGameStartInitTest() {
+        // Create an instance of Personnage with initial hit points
+        Personnage personnage = new Personnage(); // Assuming 100 is the expected value
+        
+        assertEquals(true,personnage.isAlive());
+        // Check if the initial hi
+    }
+ 
     
 }
